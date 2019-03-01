@@ -46,9 +46,6 @@ public class SceneController : MonoBehaviour
 
         }
 
-
-        //CamaraPrincipal.transform.LookAt()
-
     }
     private void Update()
     {
