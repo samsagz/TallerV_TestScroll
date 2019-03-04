@@ -504,7 +504,7 @@ MonoBehaviour:
   AlturaImagen: 116
   PosicionOriginal: {x: 0, y: 0, z: -10}
   PosicionDestino: {x: 0, y: 0, z: -10}
-  VelocidadSuavizado: 0.125
+  VelocidadSuavizado: 0.025
   ajuste: {x: 0, y: 0, z: 0}
 --- !u!4 &1216913881
 Transform:

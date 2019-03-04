@@ -32,6 +32,16 @@ public class SceneControlerThree : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            bar.value -= VelocidadSuavizado;
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            bar.value += VelocidadSuavizado;
+
+        }
+
     }
 
     void FixedUpdate()
@@ -45,6 +55,11 @@ public class SceneControlerThree : MonoBehaviour
 
     public void CambiarPosicion()
     {
-        PosicionDestino = new Vector3(PosicionOriginal.x, PosicionOriginal.y - (bar.value*AlturaImagen), PosicionOriginal.z);
+        PosicionDestino = new Vector3(PosicionOriginal.x, PosicionOriginal.y - (bar.value * AlturaImagen), PosicionOriginal.z);
+    }
+
+    public void CambiarPosicionMouse()
+    {
+        bar.value += Input.mouseScrollDelta.y;
     }
 }
